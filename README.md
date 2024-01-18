@@ -5,7 +5,10 @@ We use CityFlow as a traffic simulator. The version is the same as in `https://g
 
 # build 
 We recommend using the image: `zyr17/unlight` to build the cityflow environment. Alternatively, you can build an environment yourself. Our code runs on Python 3.6.5 and will work on higher versions of Python, but compatibility is not guaranteed.
-`pip install -r requirements.txt`
+```python
+git clone git@github.com:zyr17/UniLight.git
+pip install -r requirements.txt
+```
 
 # run
 You can decide which dataset to run by changing the parameters.
@@ -17,8 +20,6 @@ python main.py --data 'jinan'
 # Details
 
 ## Environment
-You can decide which dataset to run by changing the parameters
-
 The definition of environment is in `envs/env_Heterogeneous.py`.
 
 ## Dataset
