@@ -9,8 +9,11 @@ We recommend using the mirror: `zyr17/unlight` to build the cityflow environment
 `pip install -r requirements.txt`
 
 # run
-```#'jinan' 'hangzhou' 'newyork16_3 'newyork28_7' 'manhattan' 'SH1' 'SH2'
-python main.py --data 'jinan'```
+You can decide which dataset to run by changing the parameters.
+```python
+#'jinan' 'hangzhou' 'newyork16_3 'newyork28_7' 'manhattan' 'SH1' 'SH2'
+python main.py --data 'jinan'
+```
 
 # Details
 
