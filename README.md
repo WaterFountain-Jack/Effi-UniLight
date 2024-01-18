@@ -5,7 +5,7 @@ We use CityFlow as a traffic simulator. The version is the same as in `https://g
 `git clone git@github.com:zyr17/UniLight.git`
 
 # build 
-We recommend using the mirror: `zyr17/unlight` to build the cityflow environment. Alternatively, you can build an environment yourself. Our code runs on Python 3.6.5 and will work on higher versions of Python, but compatibility is not guaranteed.
+We recommend using the image: `zyr17/unlight` to build the cityflow environment. Alternatively, you can build an environment yourself. Our code runs on Python 3.6.5 and will work on higher versions of Python, but compatibility is not guaranteed.
 `pip install -r requirements.txt`
 
 # run
