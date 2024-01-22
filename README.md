@@ -1,17 +1,26 @@
 # Effi-UniLight
 
 # docker
-We use CityFlow as a traffic simulator. The version is the same as in `https://github.com/zyr17/UniLight`.
+We recommend using dockers to build the cityflow platform.
+```python
+docker pull zyr17/unlight
+sudo docker run -it --name EffiUni-Light zyr17/unilight /bin/bash 
+```
 
 # build 
-We recommend using the image: `zyr17/unlight` to build the cityflow environment. Alternatively, you can build an environment yourself. Our code runs on Python 3.6.5 and will work on higher versions of Python, but compatibility is not guaranteed.
+Download and copy the zip file into the created container, then unzip the zip file after entering the container.
 ```python
-git clone git@github.com:zyr17/UniLight.git
+docker cp EffiUni-Light.zip EffiUni-Light:/
+docker exec -it EffiUni-Light bash
+unzip Effi-UniLight-main.zip
+cd Effi-UniLight-main
+unzip data.zip
 pip install -r requirements.txt
 ```
 
-# run
+# run & test
 You can decide which dataset to run by changing the parameters.
+The model is tested once after each training session.
 ```python
 #'jinan' 'hangzhou' 'newyork16_3 'newyork28_7' 'manhattan' 'SH1' 'SH2'
 python main.py --data 'jinan'
@@ -26,7 +35,7 @@ The definition of environment is in `envs/env_Heterogeneous.py`.
 You can find the datasets in `/data`.
 
 ## Agents
-You can find the agent in `/agent` and the detailed structural design of the model in `/agent/Effi_UniLight_core.py`.
+You can find the agent in `/agent/Effi_UniLight` and the detailed structural design of the model in `/agent/Effi_UniLight_core.py`.
 
 ## Arguments and Configs
 We parse the parameters via `config/config.py`.
